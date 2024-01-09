@@ -10,7 +10,7 @@
 :root {
   --header-Color: #1d1d1f;
   --color-1: rgb(8, 119, 247);
-  --color-2: black;
+  --color-2: #0e0e0e;
   --color-3: rgba(255, 255, 255, 0.685);
   --color-4: rgb(255, 255, 255);
 }
@@ -30,7 +30,7 @@
 #cabecalho .container {
   width: 100%;
   height: 50px;
-  background-color: var(--header-Color);
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,45 +54,95 @@
 #cabecalho nav li a {
   padding: 0.8rem 1.2rem;
   text-decoration: none;
-  color: var(--color-3);
+  color: var(--color-2);
   transition: all 0.7s linear;
   font-size: 0.9em;
 }
 
 #cabecalho nav li a:hover {
-  background-color: var(--color-1);
-  color: var(--color-4);
+  cursor: pointer;
 }
 
-#model-links {
+.menu-icons {
+  width: 15px;
+}
+
+/* 
+===========DROPDOWN SEARCH / SHOP ============== */
+.dropDown {
+  width: 100%;
+  height: 0;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  padding: 1rem 0;
-  gap: 20px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 200;
+  transition: .5s ease-in-out;
+  overflow: hidden;
 }
 
-.models {
+.container__dropdown {
+  width: 80%;
+  height: 100%;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__dropdown > input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 2rem;
+  font-size: 2em;
+  color: #333;
+  border-radius: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container__dropdown > ul {
+  list-style: none;
+}
+
+.container__dropdown > ul > li {
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+  transform: scale(1);
+  transition: .5s;
+}
+
+.container__dropdown > ul > li:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.container__dropdown > ul > li > img {
+  margin-right: .5rem;
+}
+
+.blur {
+  filter: blur(20px)
+}
+
+.container__main-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
-.models img {
-  width: 50px;
-  height: 50px;
+.container__main-banner > h1 {
+  margin-top: 7rem;
 }
 
-.models a {
-  margin: 5px;
-  text-decoration: none;
-  color: var(--color-2);
+.container__main-banner > img {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
 }
 
-.models a:hover {
-  color: var(--color-1);
-}
 
 #welcome {
   text-align: center;
@@ -306,7 +356,7 @@
     width: 100%;
     top: 50px;
     right: 0px;
-    background-color: black;
+    background-color: #fff;
     text-align: center;
     height: 0px;
     transition: 0.6s;
@@ -322,10 +372,10 @@
   }
   #cabecalho nav li a {
     text-decoration: none;
-    color: var(--color-3);
+    color: var(--color-2);
     transition: all 0.7s linear;
     font-size: 0.9em;
-    border-bottom: 1px solid #ffff;
+    border-bottom: 1px solid var(--color-2);
   }
 
   #cabecalho nav li a:hover {
@@ -339,7 +389,7 @@
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1em;
-    color: var(--color-4);
+    color: var(--color-2);
     border: none;
     background: none;
     cursor: pointer;
