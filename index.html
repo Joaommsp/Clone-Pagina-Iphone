@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>IPhone</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="apple, iphone, smartphone" />
+    <meta name="description" content="Clone da página iPhone da Apple" />
+    <meta name="author" content="João Marcos" />
+    <link rel="shortcut icon" href="public/apple.svg" type="image/x-icon" />
+    <link rel="stylesheet" media="(max-width: 600px)" href="src/mobile.css" />
+    <link
+      rel="stylesheet"
+      media="(min-width: 600px) and (max-width: 800px)"
+      href="src/tablet.css"
+    />
+    <link rel="stylesheet" media="(min-width:800px)" href="src/style.css" />
+
+    <link rel="stylesheet" href="plugins/jquery.bxslider.css" />
+    <link rel="stylesheet" href="plugins/magnific-popup.css" />
+
+    <script src="plugins/jquery.min.js"></script>
+    <script src="plugins/jquery.bxslider.min.js"></script>
+    <script src="plugins/jquery.magnific-popup.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slider").bxSlider({
+          mode: "horizontal",
+          captions: true,
+          // slideWidth : 800,
+          auto: true,
+          pager: true,
+          // speed: 100,
+          //controls: true,
+        });
+        $("#galeria-fotos").magnificPopup({
+          delegate: "a",
+          type: "image",
+          closeOnContentClick: false,
+          closeBtnInside: false,
+          mainClass: "mfp-with-zoom mfp-img-mobile",
+          image: {
+            verticalFit: true,
+            titleSrc: function (item) {
+              return item.el.attr("");
+            },
+          },
+          gallery: {
+            enabled: true,
+          },
+          zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function (element) {
+              return element.find("img");
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header id="cabecalho">
+      <div class="container">
+        <img src="imagens/logo_apple_preto.png" id="logo" />
+        <nav id="nav">
+          <button class="mobileMenuLinks">
+            <img src="./imagens/svg/search.svg" alt="" />
+          </button>
+          <button class="mobileMenuLinks">
+            <img src="./imagens/svg/shop.svg" alt="" />
+          </button>
+          <button id="btn-mobile">
+            <span
+              id="hamburguer-icon"
+              aria-expanded="false"
+              aria-controls="menu"
+              aria-haspopup="true"
+              aria-label="Abrir Menu"
+            ></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a class="menuLink" href="">Loja</a></li>
+            <li><a class="menuLink" href="">Mac</a></li>
+            <li><a class="menuLink" href="">Ipad</a></li>
+            <li><a class="menuLink" href="">Iphone</a></li>
+            <li><a class="menuLink" href="">Watch</a></li>
+            <li><a class="menuLink" href="">AirPods</a></li>
+            <li><a class="menuLink" href="">TV e Casa</a></li>
+            <li><a class="menuLink" href="">Só na Apple</a></li>
+            <li><a class="menuLink" href="">Acessórios</a></li>
+            <li><a class="menuLink" href="">Suporte</a></li>
+            <li>
+              <a href="https://www.apple.com/br/iphone/" target="_blank"
+                >Site oficial</a
+              >
+            </li>
+            <li id="btn-search">
+              <a><img src="imagens/svg/search.svg" class="menu-icons" /></a>
+            </li>
+            <li id="btn-cart">
+              <a><img src="imagens/svg/shop.svg" class="menu-icons" /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="dropDown"></div>
+    </header>
+
+    <main>
+      <div class="container__main-banner">
+        <h1>iPhone</h1>
+        <img src="imagens/iphones/iphone15.jpg" alt="" />
+      </div>
+
+      <div id="welcome">
+        <p>Novo</p>
+        <p><strong>iPhone 15</strong></p>
+        <div id="buy-section">
+          <button>Comprar</button>
+          <a href="">Saiba Mais</a>
+        </div>
+      </div>
+
+      <section id="banners">
+        <div class="container">
+          <ul class="slider">
+            <li><img src="imagens/banners/iphone14.jpg" alt="" /></li>
+            <li><img src="imagens/banners/iPhone-14-2.jpg" alt="" /></li>
+            <li><img src="imagens/banners/iphone 14 3.jpeg" alt="" /></li>
+            <li><img src="imagens/banners/iphone 14 4.png" alt="" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="versoes">
+        <div class="container">
+          <h2 class="titulo-secao">Qual é o iPhone ideal para você?</h2>
+          <div id="modelos">
+            <div>
+              <img src="imagens/iphones/iphone_13_pro.jpg" />
+              <h3>iPhone 13 Pro</h3>
+              <ul>
+                <li>
+                  Tela OLED sem bordas com ProMotion de 6,7 pol. ou 6,1 pol.
+                </li>
+                <li>
+                  Sistema de câmera Pro. Teleobjetiva, grande-angular e
+                  ultra-angular
+                </li>
+                <li>Chip A15 Bionic</li>
+              </ul>
+              <a href="" class="but-comprar">Comprar</a>
+              <a href="" class="but-saiba-mais">Saiba mais</a>
+            </div>
+            <div>
+              <img src="imagens/iphones/iphone_13.jpg" />
+              <h3>iPhone 13</h3>
+              <ul>
+                <li>Tela OLED sem bordas de 6,1 pol. ou 5,4 pol.</li>
+                <li>Sistema avançado de câmera dupla</li>
+                <li>Chip A15 Bionic</li>
+              </ul>
+              <a href="" class="but-comprar">Comprar</a>
+              <a href="" class="but-saiba-mais">Saiba mais</a>
+            </div>
+            <div>
+              <img src="imagens/iphones/iphone_12.jpg" />
+              <h3>iPhone 12</h3>
+              <ul>
+                <li>Tela OLED sem bordas de 6,1 pol. ou 5,4 pol.</li>
+                <li>Sistema de câmera dupla</li>
+                <li>Chip A15 Bionic</li>
+              </ul>
+              <a href="" class="but-comprar">Comprar</a>
+              <a href="" class="but-saiba-mais">Saiba mais</a>
+            </div>
+            <div>
+              <img src="imagens/iphones/iphone_se.jpg" />
+              <h3>iPhone SE (3ª geração)</h3>
+              <ul>
+                <li>Tela LCD</li>
+                <li>Sistema de câmera única</li>
+                <li>Chip A15 Bionic</li>
+              </ul>
+              <a href="" class="but-comprar">Comprar</a>
+              <a href="" class="but-saiba-mais">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fotos">
+        <div class="container">
+          <h2 class="titulo-secao">
+            Surpreenda-se com o poder da camêra de um iPhone
+          </h2>
+          <div id="galeria-fotos">
+            <a href="imagens/fotos/fotosg/foto01.jpg" title="Foto 01"
+              ><img src="imagens/fotos/fotosp/foto01.jpg" alt=""
+            /></a>
+            <a href="imagens/fotos/fotosg/foto02.jpg" title="Foto 02"
+              ><img src="imagens/fotos/fotosp/foto02.jpg" alt=""
+            /></a>
+            <a href="imagens/fotos/fotosg/foto03.jpg" title="Foto 03"
+              ><img src="imagens/fotos/fotosp/foto03.jpg" alt=""
+            /></a>
+            <a href="imagens/fotos/fotosg/foto04.jpg" title="Foto 04"
+              ><img src="imagens/fotos/fotosp/foto04.jpg" alt=""
+            /></a>
+            <a href="imagens/fotos/fotosg/foto05.jpg" title="Foto 05"
+              ><img src="imagens/fotos/fotosp/foto05.jpg" alt=""
+            /></a>
+            <a href="imagens/fotos/fotosg/foto06.jpg" title="Foto 06"
+              ><img src="imagens/fotos/fotosp/foto06.jpg" alt=""
+            /></a>
+            <a href="imagens/fotos/fotosg/foto07.jpg" title="Foto 07"
+              ><img src="imagens/fotos/fotosp/foto07.jpg" alt=""
+            /></a>
+            <a href="imagens/fotos/fotosg/foto08.jpg" title="Foto 08"
+              ><img src="imagens/fotos/fotosp/foto08.jpg" alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="video">
+        <div class="container">
+          <h2 class="titulo-secao">Apresentamos o iPhone 15</h2>
+          <iframe
+            src="https://www.youtube.com/embed/XHTrLYShBRQ?si=agUZkrFyqnb7-7fv"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer id="rodape">
+      <p>
+        Este site foi desenvolvidos apenas para fins experimentais, todos os
+        direito são da marca oficial
+      </p>
+      <p>
+        This site has been developed for experimental purposes only, all rights
+        are the official trademark.
+      </p>
+      <p>Site oficial/ oficial Website:</p>
+      <a href="https://www.apple.com/br/iphone/"
+        >https://www.apple.com/br/iphone/</a
+      >
+      <address id="contato">
+        Dev: João Marcos <br />
+        E-mail: <a href="mailto:jmmsp2003@hotmail.com">jmmsp2003@hotmail.com</a>
+        <br />
+
+        Tel:<a href="tel:+5575988275212">(75)98827-5212 (whatsapp)</a>
+        <br />
+      </address>
+    </footer>
+    <script src="src/main.js"></script>
+  </body>
+</html>
