@@ -81,9 +81,10 @@
   background-color: #fff;
   position: absolute;
   z-index: 200;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   overflow: hidden;
 }
+
 
 .container__dropdown {
   width: 80%;
@@ -111,9 +112,9 @@
 .container__dropdown > ul > li {
   display: flex;
   align-items: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   transform: scale(1);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .container__dropdown > ul > li:hover {
@@ -122,11 +123,11 @@
 }
 
 .container__dropdown > ul > li > img {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .blur {
-  filter: blur(20px)
+  filter: blur(20px);
 }
 
 .container__main-banner {
@@ -146,7 +147,6 @@
   position: absolute;
   bottom: 2rem;
 }
-
 
 #welcome {
   text-align: center;
