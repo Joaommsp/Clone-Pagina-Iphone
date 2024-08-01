@@ -60,7 +60,7 @@ use a extensão Live Server ou semelhante
 Clique e acesse o projeto
 
 <div align="left">
- <a href="https://joaommsp.github.io/Clone-Pagina-Iphone/"><img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo"  /></a>
+ <a href="https://joaommsp.github.io/iPhone"><img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo"  /></a>
 </div>
 
 ## 🤓 Me acompanhe para mais projetos
